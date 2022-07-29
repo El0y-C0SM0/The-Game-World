@@ -1,0 +1,45 @@
+@font-face{
+    font-family: Coves;
+    src: url(fonts/Coves_Bold.otf);
+}
+@font-face{
+    font-family: FastHand;
+    src: url(fonts/Fast_Hand.otf);
+}
+html, body{
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    top: 0;
+}
+body{
+    font-family: Coves;
+}
+header{
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #04030e;
+}
+header h1{
+    position: relative;
+    top: 30%;
+    font-size: xx-large;
+    color: white;
+}
+section{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vh;
+    padding: 5vh;
+}
+h1, h2, h3{
+    font-family: FastHand;
+    margin: 1em;
+    color: black;
+}
+article{
+    border: 3px solid #04030e;
+    margin: 5vh;
+}
