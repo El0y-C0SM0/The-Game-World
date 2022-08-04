@@ -1,61 +1,182 @@
-@font-face{
+@font-face {
     font-family: Coves;
     src: url(fonts/Coves_Bold.otf);
 }
-@font-face{
+
+@font-face {
     font-family: Roxane;
     src: url(fonts/RoxaneDisplay-Bold.otf);
 }
-html, body{
+
+html, body {
     padding: 0;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     margin: 0;
     top: 0;
 }
-body{
+
+body {
     font-family: Coves;
     overflow-x: hidden;
 }
-header{
+
+header {
     top: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    
     background-image: linear-gradient(60deg, #090c0f 10%, #06050f 100%);
     font-size: 3vh;
-    color: #f8f8f8;
+    color: #DDDDDD;
     padding: 10% 5% 0% 3%;
 }
-section{
+
+section {
     padding: 2% 3% 2% 3%;
 }
-header h1{
-    color: #f8f8f8;
+
+header h1 {
+    color: #DDDDDD;
 }
-section{
+
+header p {
+    margin-left: 3vh;
+}
+
+section {
     font-size: 3vh;
     box-sizing: border-box;
     width: 100vh;
 }
-#mundo-gamer{
+
+#mundo-gamer {
     width: 100%;
-    background-color: #0d1825;
-    color: #f8f8f8;
-}
-h1, h2, h3{
-    font-family: Roxane;
-    margin: 1em 0em 1em 0;
-    color: #f8f8f8;
+    background-image: linear-gradient(to right, #090057 0%, #010125 40%);
+    color: #DDDDDD;
 }
 
-article{
-    border: 3px solid #06050f;
+#tipos-de-jogos {
+    width: 100%;
+    background-image: linear-gradient(-225deg, #1B2430 10%, #616161 46%, #1B2430 100%);
+}
+
+#grid-jogos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#grid-jogos article {
+    display: inline-flex;
+    height: 7em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+}
+
+#terror {
+    background-image: url(https://teoriageek.com.br/wp-content/uploads/2020/10/Amnesia-Rebirth-1.jpg);
+    border-bottom-right-radius: 2vh;
+    border-top-right-radius: 2vh;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: Roxane;
+    margin: 1em 3vh 1em 3vh;
+    color: #DDDDDD;
+}
+
+article h3 {
+    margin: 1em 0 1em 0;
+}
+
+article {
     margin: 3vh;
     padding: 2vh;
     border-radius: 2vh;
     background-color: #23272c;
+    border: 3px solid #23272c;
 }
-article:hover{
-    border: 3px solid #f8f8f8;
+
+article:hover {
+    border: 3px solid #DDDDDD;
+}
+
+#grid-jogos article:hover {
+    border: 3px solid #DDDDDD;
+}
+
+nav {
+    z-index: 1;
+    background-color: #090c0f;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.container {
+    margin: 3vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkbox-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+
+label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 2em;
+    border-radius: 30px;
+    background: #DDDDDD;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 0;
+}
+
+label span:nth-child(2) {
+    top: 8px;
+}
+
+label span:nth-child(3) {
+    top: 16px;
+}
+
+#checkbox-menu:checked+label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+#checkbox-menu:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+#checkbox-menu:checked+label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
 }
